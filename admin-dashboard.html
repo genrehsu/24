@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="max-w-4xl mx-auto py-10">
+        <h1 class="text-3xl font-bold mb-6">Selamat Datang, Admin!</h1>
+        <p class="mb-4">Di halaman ini, Anda dapat mengedit konten website sesuai keinginan.</p>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-xl font-bold mb-4">Edit Konten Website</h2>
+            <textarea id="websiteContent" class="w-full h-40 p-4 border rounded-md mb-4" placeholder="Edit konten di sini..."></textarea>
+            <button id="saveBtn" class="bg-primary text-white px-6 py-2 rounded-md font-bold hover:bg-blue-800 transition">Simpan Perubahan</button>
+            <div id="saveStatus" class="mt-4 text-green-600 font-semibold hidden">Perubahan berhasil disimpan!</div>
+        </div>
+    </div>
+    <script>
+    document.getElementById('saveBtn').addEventListener('click', function() {
+        document.getElementById('saveStatus').classList.remove('hidden');
+        setTimeout(() => {
+            document.getElementById('saveStatus').classList.add('hidden');
+        }, 2000);
+    });
+    </script>
+</body>
+</html>
